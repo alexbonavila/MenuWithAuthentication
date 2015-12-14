@@ -46,6 +46,7 @@ class MenuItem
 
     /**
      * MenuItem constructor.
+     * @param $id
      */
     public function __construct($id)
     {

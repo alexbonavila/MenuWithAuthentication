@@ -13,7 +13,7 @@ use MenuWithAuthentication\menu\MenuItem;
 
 class MenuWithAuthentication
 {
-
+    public static $instance=null;
     /**
      * MenuWithAuthentication constructor.
      */
@@ -22,9 +22,15 @@ class MenuWithAuthentication
 
     }
 
-    public static function menu(){
-        $menu=new MenuItem();
-        return $menu;
+    public static function menu($id){
+        return new MenuItem($id);
+    }
+
+    public static function instance(){
+        if(is_null(static::$instance)){
+            return static::$instance=new static;
+        }
+        return static::$instance;
     }
 
 }
