@@ -33,4 +33,9 @@ class MenuWithAuthentication
         return static::$instance;
     }
 
+    public function getMenu()
+    {
+        return array();
+    }
+
 }

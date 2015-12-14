@@ -3,6 +3,7 @@
 namespace MenuWithAuthentication\Http\ViewComposer;
 
 use Illuminate\Contracts\View\View;
+use MenuWithAuthentication\MenuWithAuthentication;
 
 
 /**
@@ -20,7 +21,9 @@ class SidebarComposer
     }
 
     private function getSidebarMenu(){
-        $menu = MenuWithAuthentication::instance()->getMenu();
+        $menu =
+            MenuWithAuthentication::instance()
+                ->getMenu();
         return array();
     }
 }

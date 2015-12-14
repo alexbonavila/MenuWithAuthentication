@@ -13,6 +13,8 @@
 
 //Home
 //Todo Comprovar
+use MenuWithAuthentication\MenuWithAuthentication;
+
 MenuWithAuthentication::menu('home')
     ->title('Home')
     ->icon('fa-dashboard')
