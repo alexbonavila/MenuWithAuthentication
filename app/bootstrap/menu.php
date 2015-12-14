@@ -12,12 +12,32 @@
 //Té submenus
 
 //Home
-Menu::
+MenuWithAuthentication::Menu()
+    ->title('Home')
+    ->icon('fa-dashboard')
+    ->url('/home')
+    ->rol('home')
+    ->user('alexbonavila');
 
 //Another Link
-Menu::
+MenuWithAuthentication::Menu()
+    ->title('Another link')
+    ->user(5);
 
 //Multilevel
-Menu::
-    Menu::
-    Menu::
+MenuWithAuthentication::Menu()
+    ->title('Multilevel')
+    ->icon('fa-credit-card');
+
+    MenuWithAuthentication::Menu()
+        ->title('link in level 2')
+        ->icon('fa-briefcase');
+
+    MenuWithAuthentication::Menu()
+        ->title('link in level 2')
+        ->icon('fa-user');
+
+MenuWithAuthentication::Menu()
+    ->title('Ultim menú')
+    ->icon('fa-dashboard')
+    ->url('http://www.google.es');
