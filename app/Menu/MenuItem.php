@@ -133,7 +133,16 @@ class MenuItem
 
     private function render()
     {
-        return"";
+        $data=array();
+
+        $data['url']=$this->url;
+        $data['icon']=$this->icon;
+        $data['title']=$this->title;
+//        $data['permission']=$this->permission;
+//        $data['role']=$this->role;
+//        $data['user']=$this->user;
+        
+        return view('menuitem',$data);
     }
 
 
