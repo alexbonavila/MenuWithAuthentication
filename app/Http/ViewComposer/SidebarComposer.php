@@ -21,9 +21,12 @@ class SidebarComposer
     }
 
     private function getSidebarMenu(){
-        $menu =
-            MenuWithAuthentication::instance()
-                ->getMenu();
+
         return array();
+
+//        $menu =
+//            MenuWithAuthentication::instance()
+//                ->getMenu();
+//        return array($menu);
     }
 }
