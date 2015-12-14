@@ -12,7 +12,8 @@
 //Té submenus
 
 //Home
-MenuWithAuthentication::Menu()
+//Todo Comprovar
+MenuWithAuthentication::menu('home')
     ->title('Home')
     ->icon('fa-dashboard')
     ->url('/home')
@@ -21,24 +22,24 @@ MenuWithAuthentication::Menu()
     ->user('alexbonavila');
 
 //Another Link
-MenuWithAuthentication::Menu()
+MenuWithAuthentication::menu('anotherLink')
     ->title('Another link')
     ->user(5);
 
 //Multilevel
-MenuWithAuthentication::Menu()
+MenuWithAuthentication::menu('multi')
     ->title('Multilevel')
     ->icon('fa-credit-card');
 
-    MenuWithAuthentication::Menu()
+    MenuWithAuthentication::menu('link2')
         ->title('link in level 2')
         ->icon('fa-briefcase');
 
-    MenuWithAuthentication::Menu()
+    MenuWithAuthentication::menu('link3')
         ->title('link in level 2')
         ->icon('fa-user');
 
-MenuWithAuthentication::Menu()
+MenuWithAuthentication::menu('link4')
     ->title('Ultim menú')
     ->icon('fa-dashboard')
     ->url('http://www.google.es');

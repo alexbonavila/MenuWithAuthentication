@@ -39,13 +39,18 @@ class MenuItem
      * @var
      */
     protected $url;
+    /**
+     * @var
+     */
+    private $id;
 
     /**
      * MenuItem constructor.
      */
-    public function __construct()
+    public function __construct($id)
     {
 
+        $this->id = $id;
     }
 
     /**
@@ -125,12 +130,18 @@ class MenuItem
         $this->user =$user;
         return $this;
     }
-
+//Todo Comprovar
+    /**
+     * @return string
+     */
     function __toString()
     {
         return $this->render();
     }
 
+    /**
+     * @return string
+     */
     private function render()
     {
         $data=array();
@@ -138,11 +149,12 @@ class MenuItem
         $data['url']=$this->url;
         $data['icon']=$this->icon;
         $data['title']=$this->title;
+        $adta['id']=$this->id;
 //        $data['permission']=$this->permission;
 //        $data['role']=$this->role;
 //        $data['user']=$this->user;
-        
-        return view('menuitem',$data);
+
+        return (String) view('menu.menuitem',$data);
     }
 
 
