@@ -13,6 +13,7 @@
 
 //Home
 //Todo Comprovar
+namespace MenuWithAuthentication\bootstrap;
 use MenuWithAuthentication\MenuWithAuthentication;
 
 MenuWithAuthentication::menu('home')
