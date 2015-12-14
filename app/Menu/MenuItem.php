@@ -15,6 +15,7 @@ namespace MenuWithAuthentication\menu;
  */
 class MenuItem
 {
+    protected static $current;
     /**
      * @var
      */
@@ -40,6 +41,7 @@ class MenuItem
      */
     protected $url;
     protected $level;
+    protected $subItems;
     /**
      * @var
      */
