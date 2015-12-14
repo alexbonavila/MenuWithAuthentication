@@ -136,10 +136,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-        Barryvdh\Debugbar\ServiceProvider::class,
-        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
-        Acacha\AdminLTETemplateLaravel\app\Providers\AdminLTETemplateServiceProvider::class,
-        Zizaco\Entrust\EntrustServiceProvider::class,
+
 
         /*
          * Application Service Providers...
@@ -148,6 +145,10 @@ return [
         MenuWithAuthentication\Providers\AuthServiceProvider::class,
         MenuWithAuthentication\Providers\EventServiceProvider::class,
         MenuWithAuthentication\Providers\RouteServiceProvider::class,
+        Barryvdh\Debugbar\ServiceProvider::class,
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+        Acacha\AdminLTETemplateLaravel\app\Providers\AdminLTETemplateServiceProvider::class,
+        Zizaco\Entrust\EntrustServiceProvider::class,
 
     ],
 
@@ -198,6 +199,7 @@ return [
         'View'      => Illuminate\Support\Facades\View::class,
         'Debugbar'  => Barryvdh\Debugbar\Facade::class,
         'Entrust'   => 'Zizaco\Entrust\EntrustFacade',
+        'MenuWithAuthentication' => MenuWithAuthentication\MenuWithAuthentication::class,
     ],
 
 ];

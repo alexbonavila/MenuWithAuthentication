@@ -14,6 +14,7 @@ use MenuWithAuthentication\menu\MenuItem;
 class MenuWithAuthentication
 {
     public static $instance=null;
+    protected $menu;
     /**
      * MenuWithAuthentication constructor.
      */
@@ -35,7 +36,7 @@ class MenuWithAuthentication
 
     public function getMenu()
     {
-        return array();
+        return $this->menu->items();
     }
 
 }

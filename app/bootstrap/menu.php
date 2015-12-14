@@ -20,7 +20,7 @@ MenuWithAuthentication::menu('home')
     ->title('Home')
     ->icon('fa-dashboard')
     ->url('/home')
-    ->rol('home')
+    ->role('home')
     ->permission('home')
     ->user('alexbonavila');
 

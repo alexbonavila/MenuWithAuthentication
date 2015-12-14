@@ -39,11 +39,13 @@ class MenuItem
      * @var
      */
     protected $url;
+    protected $level;
     /**
      * @var
      */
     private $id;
 
+    //TODO ARRECLAR
     /**
      * MenuItem constructor.
      * @param $id
@@ -52,7 +54,34 @@ class MenuItem
     {
 
         $this->id = $id;
+
+        if(is_null(static::$current))
+        {
+            static::$current=$this;
+            $this->level(0);
+        }else{
+            static::$current->addItem($this);
+            $this->level(static::$current->level()+1);
+        }
+
     }
+
+    public function addItem($item)
+    {
+        $this->subItems[]=$item;
+        return $this;
+    }
+
+    public function level($level = null)
+    {
+        if($level==null){
+            return $this->level;
+        }
+        $this->level=$level;
+        return $this;
+    }
+
+
 
     /**
      * @param null $title
