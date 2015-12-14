@@ -43,7 +43,7 @@
             @foreach($menu as $menuitem)
                 {{$menuitem}}
             @endforeach
-        </ul><!-- /.sidebar-menu -->
+        </ul><!-- /.sidebar-Menu -->
     </section>
     <!-- /.sidebar -->
 </aside>

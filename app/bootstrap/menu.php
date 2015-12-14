@@ -17,6 +17,7 @@ MenuWithAuthentication::Menu()
     ->icon('fa-dashboard')
     ->url('/home')
     ->rol('home')
+    ->permission('home')
     ->user('alexbonavila');
 
 //Another Link
